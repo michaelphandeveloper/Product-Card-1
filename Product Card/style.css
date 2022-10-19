@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+}
+
+.container {
+  background: #36454f;
+  width: 350px;
+  padding: 40px 40px 0 40px;
+  border-radius: 10px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.container:hover {
+  padding-bottom: 40px;
+}
+
+.imgbox {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  z-index: 2;
+}
+
+img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(0.9);
+  transition: 0.3s ease-in;
+  z-index: 2;
+}
+
+.imgbox span {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  background: #00a2ed;
+  border-radius: 50%;
+  transition: 0.3s ease-in;
+  z-index: 0;
+}
+
+.container:hover .imgbox span {
+  width: 500px;
+  height: 500px;
+  transform: translate(-80px, -280px);
+}
+
+.container:hover .imgbox img {
+  transform: translateY(-30px);
+}
+
+.brand {
+  position: absolute;
+  font-size: 8em;
+  font-weight: 900;
+  top: 35%;
+  -webkit-text-stroke: 0.5px #fff;
+  color: transparent;
+  opacity: 0.2;
+  z-index: 1;
+}
+
+.title {
+  font-size: 1.4em;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+  word-spacing: 2px;
+}
+
+.buySection {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 25px;
+  transition: all 0.3s;
+}
+
+.buySection h2 {
+  color: #fff;
+  font-size: 1.6rem;
+  transition: 0.3s;
+  transform: translateY(100px);
+}
+
+.buySection sup {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.buySection span {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.buySection button {
+  padding: 15px 30px;
+  border-radius: 50px;
+  border: none;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+  background: #00a2ed;
+  color: #fff;
+  transition: 0.3s;
+  transform: translateY(100px);
+}
+
+.container:hover .buySection {
+  margin-top: 25px;
+}
+
+.container:hover .buySection h2 {
+  transition-delay: 0.2s;
+  transform: translateY(0px);
+}
+
+.container:hover .buySection button {
+  transition-delay: 0.4s;
+  transform: translateY(0px);
+}
